@@ -21,10 +21,9 @@ class AuthController extends Controller
             'email' => $request->email,
             'password' => $request->password
             ])) 
-            {
-            
+            {          
             return redirect('/posts');
             }
-        return back()->with('msg', 'login fail');
+        return back()->with('msg', 'Incorrect email or password');
     }
 }

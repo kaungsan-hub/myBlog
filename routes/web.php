@@ -12,6 +12,9 @@ use App\Http\Controllers\{
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/detail', function(){
+    return view('detail');
+});
 
 Route::middleware('checkAuth')->group(function(){   });
     # post
